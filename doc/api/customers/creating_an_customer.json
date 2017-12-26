@@ -1,0 +1,104 @@
+{
+  "resource": "Customers",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "/v1/customers",
+  "description": "Creating an customer",
+  "explanation": "First, create an customer, then make a later request to get it back",
+  "parameters": [
+    {
+      "scope": "customer",
+      "name": "name",
+      "description": "Name of customer"
+    },
+    {
+      "scope": "customer",
+      "name": "email",
+      "description": "Email of customer"
+    },
+    {
+      "scope": "customer",
+      "name": "book",
+      "description": "book leased"
+    }
+  ],
+  "response_fields": [
+    {
+      "scope": "customer",
+      "Type": "String",
+      "name": "name",
+      "description": "Name of cusomer"
+    },
+    {
+      "scope": "customer",
+      "Type": "String",
+      "name": "email",
+      "description": "Email of customer"
+    },
+    {
+      "scope": "customer",
+      "Type": "Book",
+      "name": "book",
+      "description": "book leased"
+    }
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/v1/customers",
+      "request_body": "{\"customer\":{\"name\":\"Book 1\",\"email\":\"hannah_cain@yahoo.com\"}}",
+      "request_headers": {
+        "Host": "api.lvh.me:3000",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MTQzNDU2MTN9.ASMfiZYvaAI4KiUBravGN2sYPt61mAJ_WdOSca55dPM",
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 201,
+      "response_status_text": "Created",
+      "response_body": "{\n  \"id\": 21,\n  \"name\": \"Book 1\",\n  \"email\": \"hannah_cain@yahoo.com\",\n  \"created_at\": \"2017-12-26T03:33:34.261Z\",\n  \"updated_at\": \"2017-12-26T03:33:34.261Z\"\n}",
+      "response_headers": {
+        "Location": "http://api.lvh.me:3000/v1/customers/21",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"2da018286dbfd8f88ced0a35ff444dd8\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "e19f99fa-ff4d-4af0-b69c-88810beb7708",
+        "X-Runtime": "0.003745",
+        "Content-Length": "137"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://api.lvh.me:3000/v1/customers\" -d '{\"customer\":{\"name\":\"Book 1\",\"email\":\"hannah_cain@yahoo.com\"}}' -X POST \\\n\t-H \"Host: api.lvh.me:3000\" \\\n\t-H \"Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MTQzNDU2MTN9.ASMfiZYvaAI4KiUBravGN2sYPt61mAJ_WdOSca55dPM\" \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Accept: application/json\" \\\n\t-H \"Cookie: \""
+    },
+    {
+      "request_method": "GET",
+      "request_path": "/v1/customers/21",
+      "request_body": null,
+      "request_headers": {
+        "Host": "api.lvh.me:3000",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MTQzNDU2MTN9.ASMfiZYvaAI4KiUBravGN2sYPt61mAJ_WdOSca55dPM",
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"id\": 21,\n  \"name\": \"Book 1\",\n  \"email\": \"hannah_cain@yahoo.com\",\n  \"created_at\": \"2017-12-26T03:33:34.261Z\",\n  \"updated_at\": \"2017-12-26T03:33:34.261Z\"\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"2da018286dbfd8f88ced0a35ff444dd8\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "bbc9d473-9bf8-400c-893f-b2c4e774865d",
+        "X-Runtime": "0.001907",
+        "Content-Length": "137"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl -g \"http://api.lvh.me:3000/v1/customers/21\" -X GET \\\n\t-H \"Host: api.lvh.me:3000\" \\\n\t-H \"Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MTQzNDU2MTN9.ASMfiZYvaAI4KiUBravGN2sYPt61mAJ_WdOSca55dPM\" \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Accept: application/json\" \\\n\t-H \"Cookie: \""
+    }
+  ]
+}

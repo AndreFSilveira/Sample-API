@@ -1,0 +1,288 @@
+Listing books
+-------------
+
+Request:
+  GET /v1/books
+  Accept: application/json
+  Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MTQzNDU2MTN9.ASMfiZYvaAI4KiUBravGN2sYPt61mAJ_WdOSca55dPM
+  Content-Type: application/json
+  Cookie: 
+  Host: api.lvh.me:3000
+
+Response:
+  Status: 200 OK
+  Cache-Control: max-age=0, private, must-revalidate
+  Content-Length: 1702
+  Content-Type: application/json; charset=utf-8
+  ETag: W/"12f3b315808460465b5356f1eac58ea4"
+  Link: <http://api.lvh.me:3000/v1/books?page=2>; rel="last", <http://api.lvh.me:3000/v1/books?page=2>; rel="next"
+  Per-Page: 10
+  Total: 20
+  X-Request-Id: 8bdc96ad-6ffe-4b48-b2f0-917fa852f758
+  X-Runtime: 0.084489
+
+  [
+    {
+      "id": 1,
+      "name": "Blithe Spirit",
+      "pages": 517,
+      "leased": false,
+      "year": 1978,
+      "customer_id": null,
+      "created_at": "2017-12-26T03:33:33.951Z",
+      "updated_at": "2017-12-26T03:33:33.951Z"
+    },
+    {
+      "id": 2,
+      "name": "Blithe Spirit",
+      "pages": 517,
+      "leased": false,
+      "year": 1978,
+      "customer_id": null,
+      "created_at": "2017-12-26T03:33:33.955Z",
+      "updated_at": "2017-12-26T03:33:33.955Z"
+    },
+    {
+      "id": 3,
+      "name": "Blithe Spirit",
+      "pages": 517,
+      "leased": false,
+      "year": 1978,
+      "customer_id": null,
+      "created_at": "2017-12-26T03:33:33.959Z",
+      "updated_at": "2017-12-26T03:33:33.959Z"
+    },
+    {
+      "id": 4,
+      "name": "Blithe Spirit",
+      "pages": 517,
+      "leased": false,
+      "year": 1978,
+      "customer_id": null,
+      "created_at": "2017-12-26T03:33:33.962Z",
+      "updated_at": "2017-12-26T03:33:33.962Z"
+    },
+    {
+      "id": 5,
+      "name": "Blithe Spirit",
+      "pages": 517,
+      "leased": false,
+      "year": 1978,
+      "customer_id": null,
+      "created_at": "2017-12-26T03:33:33.965Z",
+      "updated_at": "2017-12-26T03:33:33.965Z"
+    },
+    {
+      "id": 6,
+      "name": "Blithe Spirit",
+      "pages": 517,
+      "leased": false,
+      "year": 1978,
+      "customer_id": null,
+      "created_at": "2017-12-26T03:33:33.967Z",
+      "updated_at": "2017-12-26T03:33:33.967Z"
+    },
+    {
+      "id": 7,
+      "name": "Blithe Spirit",
+      "pages": 517,
+      "leased": false,
+      "year": 1978,
+      "customer_id": null,
+      "created_at": "2017-12-26T03:33:33.971Z",
+      "updated_at": "2017-12-26T03:33:33.971Z"
+    },
+    {
+      "id": 8,
+      "name": "Blithe Spirit",
+      "pages": 517,
+      "leased": false,
+      "year": 1978,
+      "customer_id": null,
+      "created_at": "2017-12-26T03:33:33.973Z",
+      "updated_at": "2017-12-26T03:33:33.973Z"
+    },
+    {
+      "id": 9,
+      "name": "Blithe Spirit",
+      "pages": 517,
+      "leased": false,
+      "year": 1978,
+      "customer_id": null,
+      "created_at": "2017-12-26T03:33:33.976Z",
+      "updated_at": "2017-12-26T03:33:33.976Z"
+    },
+    {
+      "id": 10,
+      "name": "Blithe Spirit",
+      "pages": 517,
+      "leased": false,
+      "year": 1978,
+      "customer_id": null,
+      "created_at": "2017-12-26T03:33:33.978Z",
+      "updated_at": "2017-12-26T03:33:33.978Z"
+    }
+  ]
+
+
+Getting a specific book
+-----------------------
+
+Request:
+  GET /v1/books/20
+  Accept: application/json
+  Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MTQzNDU2MTN9.ASMfiZYvaAI4KiUBravGN2sYPt61mAJ_WdOSca55dPM
+  Content-Type: application/json
+  Cookie: 
+  Host: api.lvh.me:3000
+
+Response:
+  Status: 200 OK
+  Cache-Control: max-age=0, private, must-revalidate
+  Content-Length: 170
+  Content-Type: application/json; charset=utf-8
+  ETag: W/"d69e489a7ec668fe3d4433e5fe42d900"
+  X-Request-Id: 90683bdd-6919-48aa-b80c-663132096772
+  X-Runtime: 0.003154
+
+  {
+    "id": 20,
+    "name": "Blithe Spirit",
+    "pages": 517,
+    "leased": false,
+    "year": 1978,
+    "customer_id": null,
+    "created_at": "2017-12-26T03:33:34.006Z",
+    "updated_at": "2017-12-26T03:33:34.006Z"
+  }
+
+
+Creating an book
+----------------
+
+Parameters:
+  * name - Name of book
+  * pages - Pages of book
+  * leased - If book is leased
+  * year - year of book launch
+  * customer_id - Customer who rented the book
+
+Request:
+  POST /v1/books
+  Accept: application/json
+  Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MTQzNDU2MTN9.ASMfiZYvaAI4KiUBravGN2sYPt61mAJ_WdOSca55dPM
+  Content-Type: application/json
+  Cookie: 
+  Host: api.lvh.me:3000
+
+  {"book":{"name":"Book 1","pages":200,"leased":false,"year":2000,"customer_id":null}}
+
+Response:
+  Status: 201 Created
+  Cache-Control: max-age=0, private, must-revalidate
+  Content-Length: 163
+  Content-Type: application/json; charset=utf-8
+  ETag: W/"c41dc0d27da16490235369e0cd5bd383"
+  Location: http://api.lvh.me:3000/v1/books/21
+  X-Request-Id: 2682c07e-a06d-490c-987d-4b2ed56e6487
+  X-Runtime: 0.004625
+
+  {
+    "id": 21,
+    "name": "Book 1",
+    "pages": 200,
+    "leased": false,
+    "year": 2000,
+    "customer_id": null,
+    "created_at": "2017-12-26T03:33:34.123Z",
+    "updated_at": "2017-12-26T03:33:34.123Z"
+  }
+
+Request:
+  GET /v1/books/21
+  Accept: application/json
+  Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MTQzNDU2MTN9.ASMfiZYvaAI4KiUBravGN2sYPt61mAJ_WdOSca55dPM
+  Content-Type: application/json
+  Cookie: 
+  Host: api.lvh.me:3000
+
+Response:
+  Status: 200 OK
+  Cache-Control: max-age=0, private, must-revalidate
+  Content-Length: 163
+  Content-Type: application/json; charset=utf-8
+  ETag: W/"c41dc0d27da16490235369e0cd5bd383"
+  X-Request-Id: ab909bcf-89a4-44b8-b1ca-4aa1267bf7da
+  X-Runtime: 0.002030
+
+  {
+    "id": 21,
+    "name": "Book 1",
+    "pages": 200,
+    "leased": false,
+    "year": 2000,
+    "customer_id": null,
+    "created_at": "2017-12-26T03:33:34.123Z",
+    "updated_at": "2017-12-26T03:33:34.123Z"
+  }
+
+
+Updating an book
+----------------
+
+Parameters:
+  * name - Name of book
+  * pages - Pages of book
+  * leased - If book is leased
+  * year - year of book launch
+  * customer_id - Customer who rented the book
+
+Request:
+  PUT /v1/books/20
+  Accept: application/json
+  Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MTQzNDU2MTN9.ASMfiZYvaAI4KiUBravGN2sYPt61mAJ_WdOSca55dPM
+  Content-Type: application/json
+  Cookie: 
+  Host: api.lvh.me:3000
+
+  {"book":{"name":"Updated Name"}}
+
+Response:
+  Status: 200 OK
+  Cache-Control: max-age=0, private, must-revalidate
+  Content-Length: 169
+  Content-Type: application/json; charset=utf-8
+  ETag: W/"b610b2548e8df98f95ead1b124f6ae11"
+  X-Request-Id: 69fcb4ed-fdb7-4b79-9e84-c5dced6bb982
+  X-Runtime: 0.005092
+
+  {
+    "id": 20,
+    "name": "Updated Name",
+    "pages": 517,
+    "leased": false,
+    "year": 1978,
+    "customer_id": null,
+    "created_at": "2017-12-26T03:33:34.006Z",
+    "updated_at": "2017-12-26T03:33:34.135Z"
+  }
+
+
+Deleting an book
+----------------
+
+Request:
+  DELETE /v1/books/20
+  Accept: application/json
+  Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MTQzNDU2MTN9.ASMfiZYvaAI4KiUBravGN2sYPt61mAJ_WdOSca55dPM
+  Content-Type: application/json
+  Cookie: 
+  Host: api.lvh.me:3000
+
+Response:
+  Status: 204 No Content
+  Cache-Control: no-cache
+  X-Request-Id: 87274aae-eb45-4788-b8eb-e421ee1eaf73
+  X-Runtime: 0.003982
+
+

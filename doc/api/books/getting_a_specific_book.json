@@ -1,0 +1,44 @@
+{
+  "resource": "Books",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/v1/books/:id",
+  "description": "Getting a specific book",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/v1/books/20",
+      "request_body": null,
+      "request_headers": {
+        "Host": "api.lvh.me:3000",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MTQzNDU2MTN9.ASMfiZYvaAI4KiUBravGN2sYPt61mAJ_WdOSca55dPM",
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"id\": 20,\n  \"name\": \"Blithe Spirit\",\n  \"pages\": 517,\n  \"leased\": false,\n  \"year\": 1978,\n  \"customer_id\": null,\n  \"created_at\": \"2017-12-26T03:33:34.006Z\",\n  \"updated_at\": \"2017-12-26T03:33:34.006Z\"\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"d69e489a7ec668fe3d4433e5fe42d900\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "90683bdd-6919-48aa-b80c-663132096772",
+        "X-Runtime": "0.003154",
+        "Content-Length": "170"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl -g \"http://api.lvh.me:3000/v1/books/20\" -X GET \\\n\t-H \"Host: api.lvh.me:3000\" \\\n\t-H \"Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MTQzNDU2MTN9.ASMfiZYvaAI4KiUBravGN2sYPt61mAJ_WdOSca55dPM\" \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Accept: application/json\" \\\n\t-H \"Cookie: \""
+    }
+  ]
+}

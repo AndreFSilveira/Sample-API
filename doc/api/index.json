@@ -1,0 +1,127 @@
+{
+  "resources": [
+    {
+      "name": "Books",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Creating an book",
+          "link": "books/creating_an_book.json",
+          "groups": "all",
+          "route": "/v1/books",
+          "method": "post"
+        },
+        {
+          "description": "Deleting an book",
+          "link": "books/deleting_an_book.json",
+          "groups": "all",
+          "route": "/v1/books/:id",
+          "method": "delete"
+        },
+        {
+          "description": "Getting a specific book",
+          "link": "books/getting_a_specific_book.json",
+          "groups": "all",
+          "route": "/v1/books/:id",
+          "method": "get"
+        },
+        {
+          "description": "Listing books",
+          "link": "books/listing_books.json",
+          "groups": "all",
+          "route": "/v1/books",
+          "method": "get"
+        },
+        {
+          "description": "Updating an book",
+          "link": "books/updating_an_book.json",
+          "groups": "all",
+          "route": "/v1/books/:id",
+          "method": "put"
+        }
+      ]
+    },
+    {
+      "name": "Customers",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Creating an customer",
+          "link": "customers/creating_an_customer.json",
+          "groups": "all",
+          "route": "/v1/customers",
+          "method": "post"
+        },
+        {
+          "description": "Deleting an customer",
+          "link": "customers/deleting_an_customer.json",
+          "groups": "all",
+          "route": "/v1/customers/:id",
+          "method": "delete"
+        },
+        {
+          "description": "Getting a specific customer",
+          "link": "customers/getting_a_specific_customer.json",
+          "groups": "all",
+          "route": "/v1/customers/:id",
+          "method": "get"
+        },
+        {
+          "description": "Listing customers",
+          "link": "customers/listing_customers.json",
+          "groups": "all",
+          "route": "/v1/customers",
+          "method": "get"
+        },
+        {
+          "description": "Updating an customer",
+          "link": "customers/updating_an_customer.json",
+          "groups": "all",
+          "route": "/v1/customers/:id",
+          "method": "put"
+        }
+      ]
+    },
+    {
+      "name": "Writers",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Creating an writer",
+          "link": "writers/creating_an_writer.json",
+          "groups": "all",
+          "route": "/v1/writers",
+          "method": "post"
+        },
+        {
+          "description": "Deleting an writer",
+          "link": "writers/deleting_an_writer.json",
+          "groups": "all",
+          "route": "/v1/writers/:id",
+          "method": "delete"
+        },
+        {
+          "description": "Getting a specific writer",
+          "link": "writers/getting_a_specific_writer.json",
+          "groups": "all",
+          "route": "/v1/writers/:id",
+          "method": "get"
+        },
+        {
+          "description": "Listing writers",
+          "link": "writers/listing_writers.json",
+          "groups": "all",
+          "route": "/v1/writers",
+          "method": "get"
+        },
+        {
+          "description": "Updating an writer",
+          "link": "writers/updating_an_writer.json",
+          "groups": "all",
+          "route": "/v1/writers/:id",
+          "method": "put"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "resource": "Customers",
+  "resource_explanation": null,
+  "http_method": "PUT",
+  "route": "/v1/customers/:id",
+  "description": "Updating an customer",
+  "explanation": null,
+  "parameters": [
+    {
+      "scope": "customer",
+      "name": "name",
+      "description": "Name of customer"
+    },
+    {
+      "scope": "customer",
+      "name": "email",
+      "description": "Email of customer"
+    },
+    {
+      "scope": "customer",
+      "name": "book",
+      "description": "book leased"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "PUT",
+      "request_path": "/v1/customers/20",
+      "request_body": "{\"customer\":{\"name\":\"Updated Name\"}}",
+      "request_headers": {
+        "Host": "api.lvh.me:3000",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MTQzNDU2MTN9.ASMfiZYvaAI4KiUBravGN2sYPt61mAJ_WdOSca55dPM",
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"id\": 20,\n  \"name\": \"Updated Name\",\n  \"email\": \"wava@gmail.com\",\n  \"created_at\": \"2017-12-26T03:33:34.208Z\",\n  \"updated_at\": \"2017-12-26T03:33:34.272Z\"\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"4664c5e636a7300530a93885c3c4c6d7\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "c42e9a0a-3ee9-41c6-8eb9-634df14c242b",
+        "X-Runtime": "0.004601",
+        "Content-Length": "136"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://api.lvh.me:3000/v1/customers/20\" -d '{\"customer\":{\"name\":\"Updated Name\"}}' -X PUT \\\n\t-H \"Host: api.lvh.me:3000\" \\\n\t-H \"Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MTQzNDU2MTN9.ASMfiZYvaAI4KiUBravGN2sYPt61mAJ_WdOSca55dPM\" \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Accept: application/json\" \\\n\t-H \"Cookie: \""
+    }
+  ]
+}

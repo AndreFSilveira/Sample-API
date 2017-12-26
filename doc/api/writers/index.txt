@@ -1,0 +1,256 @@
+Listing writers
+---------------
+
+Request:
+  GET /v1/writers
+  Accept: application/json
+  Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MTQzNDU2MTN9.ASMfiZYvaAI4KiUBravGN2sYPt61mAJ_WdOSca55dPM
+  Content-Type: application/json
+  Cookie: 
+  Host: api.lvh.me:3000
+
+Response:
+  Status: 200 OK
+  Cache-Control: max-age=0, private, must-revalidate
+  Content-Length: 1512
+  Content-Type: application/json; charset=utf-8
+  ETag: W/"c96bae918806add58a248598f3c869ff"
+  Link: <http://api.lvh.me:3000/v1/writers?page=2>; rel="last", <http://api.lvh.me:3000/v1/writers?page=2>; rel="next"
+  Per-Page: 10
+  Total: 20
+  X-Request-Id: 5890033e-45e1-4b7e-9344-641f3c04aed2
+  X-Runtime: 0.038622
+
+  [
+    {
+      "id": 1,
+      "name": "Emma Haag",
+      "city": "East Javonside",
+      "dob": "1989-01-11",
+      "created_at": "2017-12-26T03:33:34.284Z",
+      "updated_at": "2017-12-26T03:33:34.284Z"
+    },
+    {
+      "id": 2,
+      "name": "Emma Haag",
+      "city": "East Javonside",
+      "dob": "1989-01-11",
+      "created_at": "2017-12-26T03:33:34.288Z",
+      "updated_at": "2017-12-26T03:33:34.288Z"
+    },
+    {
+      "id": 3,
+      "name": "Emma Haag",
+      "city": "East Javonside",
+      "dob": "1989-01-11",
+      "created_at": "2017-12-26T03:33:34.292Z",
+      "updated_at": "2017-12-26T03:33:34.292Z"
+    },
+    {
+      "id": 4,
+      "name": "Emma Haag",
+      "city": "East Javonside",
+      "dob": "1989-01-11",
+      "created_at": "2017-12-26T03:33:34.294Z",
+      "updated_at": "2017-12-26T03:33:34.294Z"
+    },
+    {
+      "id": 5,
+      "name": "Emma Haag",
+      "city": "East Javonside",
+      "dob": "1989-01-11",
+      "created_at": "2017-12-26T03:33:34.297Z",
+      "updated_at": "2017-12-26T03:33:34.297Z"
+    },
+    {
+      "id": 6,
+      "name": "Emma Haag",
+      "city": "East Javonside",
+      "dob": "1989-01-11",
+      "created_at": "2017-12-26T03:33:34.301Z",
+      "updated_at": "2017-12-26T03:33:34.301Z"
+    },
+    {
+      "id": 7,
+      "name": "Emma Haag",
+      "city": "East Javonside",
+      "dob": "1989-01-11",
+      "created_at": "2017-12-26T03:33:34.304Z",
+      "updated_at": "2017-12-26T03:33:34.304Z"
+    },
+    {
+      "id": 8,
+      "name": "Emma Haag",
+      "city": "East Javonside",
+      "dob": "1989-01-11",
+      "created_at": "2017-12-26T03:33:34.307Z",
+      "updated_at": "2017-12-26T03:33:34.307Z"
+    },
+    {
+      "id": 9,
+      "name": "Emma Haag",
+      "city": "East Javonside",
+      "dob": "1989-01-11",
+      "created_at": "2017-12-26T03:33:34.310Z",
+      "updated_at": "2017-12-26T03:33:34.310Z"
+    },
+    {
+      "id": 10,
+      "name": "Emma Haag",
+      "city": "East Javonside",
+      "dob": "1989-01-11",
+      "created_at": "2017-12-26T03:33:34.312Z",
+      "updated_at": "2017-12-26T03:33:34.312Z"
+    }
+  ]
+
+
+Getting a specific writer
+-------------------------
+
+Request:
+  GET /v1/writers/20
+  Accept: application/json
+  Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MTQzNDU2MTN9.ASMfiZYvaAI4KiUBravGN2sYPt61mAJ_WdOSca55dPM
+  Content-Type: application/json
+  Cookie: 
+  Host: api.lvh.me:3000
+
+Response:
+  Status: 200 OK
+  Cache-Control: max-age=0, private, must-revalidate
+  Content-Length: 151
+  Content-Type: application/json; charset=utf-8
+  ETag: W/"f636fca596d1b94ca228d898360d25bc"
+  X-Request-Id: ce796b14-4f3a-4b3b-943d-9eac73682489
+  X-Runtime: 0.002972
+
+  {
+    "id": 20,
+    "name": "Emma Haag",
+    "city": "East Javonside",
+    "dob": "1989-01-11",
+    "created_at": "2017-12-26T03:33:34.382Z",
+    "updated_at": "2017-12-26T03:33:34.382Z"
+  }
+
+
+Creating an writer
+------------------
+
+Parameters:
+  * name - Name of Writer
+  * city - Writing hometown
+  * dob - writer's birth date
+  * books - books the author wrote
+
+Request:
+  POST /v1/writers
+  Accept: application/json
+  Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MTQzNDU2MTN9.ASMfiZYvaAI4KiUBravGN2sYPt61mAJ_WdOSca55dPM
+  Content-Type: application/json
+  Cookie: 
+  Host: api.lvh.me:3000
+
+  {"writer":{"name":"Writer 1","city":"New Bransonton","dob":"1954-08-02"}}
+
+Response:
+  Status: 201 Created
+  Cache-Control: max-age=0, private, must-revalidate
+  Content-Length: 150
+  Content-Type: application/json; charset=utf-8
+  ETag: W/"57f27de9208da44e4e2be280fb457aae"
+  Location: http://api.lvh.me:3000/v1/writers/21
+  X-Request-Id: 53f271d6-7479-4e06-97aa-c14accea2338
+  X-Runtime: 0.003859
+
+  {
+    "id": 21,
+    "name": "Writer 1",
+    "city": "New Bransonton",
+    "dob": "1954-08-02",
+    "created_at": "2017-12-26T03:33:34.440Z",
+    "updated_at": "2017-12-26T03:33:34.440Z"
+  }
+
+Request:
+  GET /v1/writers/21
+  Accept: application/json
+  Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MTQzNDU2MTN9.ASMfiZYvaAI4KiUBravGN2sYPt61mAJ_WdOSca55dPM
+  Content-Type: application/json
+  Cookie: 
+  Host: api.lvh.me:3000
+
+Response:
+  Status: 200 OK
+  Cache-Control: max-age=0, private, must-revalidate
+  Content-Length: 150
+  Content-Type: application/json; charset=utf-8
+  ETag: W/"57f27de9208da44e4e2be280fb457aae"
+  X-Request-Id: c44881af-a412-4717-8b11-17b87a8a37c0
+  X-Runtime: 0.002277
+
+  {
+    "id": 21,
+    "name": "Writer 1",
+    "city": "New Bransonton",
+    "dob": "1954-08-02",
+    "created_at": "2017-12-26T03:33:34.440Z",
+    "updated_at": "2017-12-26T03:33:34.440Z"
+  }
+
+
+Updating an writer
+------------------
+
+Parameters:
+  * name - Name of Writer
+  * city - Writing hometown
+  * dob - writer's birth date
+  * books - books the author wrote
+
+Request:
+  PUT /v1/writers/20
+  Accept: application/json
+  Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MTQzNDU2MTN9.ASMfiZYvaAI4KiUBravGN2sYPt61mAJ_WdOSca55dPM
+  Content-Type: application/json
+  Cookie: 
+  Host: api.lvh.me:3000
+
+  {"writer":{"name":"Updated Name"}}
+
+Response:
+  Status: 200 OK
+  Cache-Control: max-age=0, private, must-revalidate
+  Content-Length: 154
+  Content-Type: application/json; charset=utf-8
+  ETag: W/"35a13a5b1240b837f7c2ab64df210003"
+  X-Request-Id: 0edf97f3-b7cf-42a9-a1c1-018409189a72
+  X-Runtime: 0.004892
+
+  {
+    "id": 20,
+    "name": "Updated Name",
+    "city": "East Javonside",
+    "dob": "1989-01-11",
+    "created_at": "2017-12-26T03:33:34.382Z",
+    "updated_at": "2017-12-26T03:33:34.453Z"
+  }
+
+
+Deleting an writer
+------------------
+
+Request:
+  DELETE /v1/writers/20
+  Accept: application/json
+  Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MTQzNDU2MTN9.ASMfiZYvaAI4KiUBravGN2sYPt61mAJ_WdOSca55dPM
+  Content-Type: application/json
+  Cookie: 
+  Host: api.lvh.me:3000
+
+Response:
+  Status: 204 No Content
+  Cache-Control: no-cache
+  X-Request-Id: 8f731bf5-6797-4ac9-9739-30f9591fee43
+  X-Runtime: 0.005004

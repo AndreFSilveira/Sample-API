@@ -1,0 +1,242 @@
+Listing customers
+-----------------
+
+Request:
+  GET /v1/customers
+  Accept: application/json
+  Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MTQzNDU2MTN9.ASMfiZYvaAI4KiUBravGN2sYPt61mAJ_WdOSca55dPM
+  Content-Type: application/json
+  Cookie: 
+  Host: api.lvh.me:3000
+
+Response:
+  Status: 200 OK
+  Cache-Control: max-age=0, private, must-revalidate
+  Content-Length: 1392
+  Content-Type: application/json; charset=utf-8
+  ETag: W/"5e0387548039edf05f60b7409a0baedb"
+  Link: <http://api.lvh.me:3000/v1/customers?page=2>; rel="last", <http://api.lvh.me:3000/v1/customers?page=2>; rel="next"
+  Per-Page: 10
+  Total: 20
+  X-Request-Id: 0432011d-e81a-428f-ac72-c056ccc24eff
+  X-Runtime: 0.035526
+
+  [
+    {
+      "id": 1,
+      "name": "Lavinia Jenkins",
+      "email": "wava@gmail.com",
+      "created_at": "2017-12-26T03:33:34.149Z",
+      "updated_at": "2017-12-26T03:33:34.149Z"
+    },
+    {
+      "id": 2,
+      "name": "Lavinia Jenkins",
+      "email": "wava@gmail.com",
+      "created_at": "2017-12-26T03:33:34.152Z",
+      "updated_at": "2017-12-26T03:33:34.152Z"
+    },
+    {
+      "id": 3,
+      "name": "Lavinia Jenkins",
+      "email": "wava@gmail.com",
+      "created_at": "2017-12-26T03:33:34.155Z",
+      "updated_at": "2017-12-26T03:33:34.155Z"
+    },
+    {
+      "id": 4,
+      "name": "Lavinia Jenkins",
+      "email": "wava@gmail.com",
+      "created_at": "2017-12-26T03:33:34.157Z",
+      "updated_at": "2017-12-26T03:33:34.157Z"
+    },
+    {
+      "id": 5,
+      "name": "Lavinia Jenkins",
+      "email": "wava@gmail.com",
+      "created_at": "2017-12-26T03:33:34.160Z",
+      "updated_at": "2017-12-26T03:33:34.160Z"
+    },
+    {
+      "id": 6,
+      "name": "Lavinia Jenkins",
+      "email": "wava@gmail.com",
+      "created_at": "2017-12-26T03:33:34.163Z",
+      "updated_at": "2017-12-26T03:33:34.163Z"
+    },
+    {
+      "id": 7,
+      "name": "Lavinia Jenkins",
+      "email": "wava@gmail.com",
+      "created_at": "2017-12-26T03:33:34.167Z",
+      "updated_at": "2017-12-26T03:33:34.167Z"
+    },
+    {
+      "id": 8,
+      "name": "Lavinia Jenkins",
+      "email": "wava@gmail.com",
+      "created_at": "2017-12-26T03:33:34.170Z",
+      "updated_at": "2017-12-26T03:33:34.170Z"
+    },
+    {
+      "id": 9,
+      "name": "Lavinia Jenkins",
+      "email": "wava@gmail.com",
+      "created_at": "2017-12-26T03:33:34.173Z",
+      "updated_at": "2017-12-26T03:33:34.173Z"
+    },
+    {
+      "id": 10,
+      "name": "Lavinia Jenkins",
+      "email": "wava@gmail.com",
+      "created_at": "2017-12-26T03:33:34.177Z",
+      "updated_at": "2017-12-26T03:33:34.177Z"
+    }
+  ]
+
+
+Getting a specific customer
+---------------------------
+
+Request:
+  GET /v1/customers/20
+  Accept: application/json
+  Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MTQzNDU2MTN9.ASMfiZYvaAI4KiUBravGN2sYPt61mAJ_WdOSca55dPM
+  Content-Type: application/json
+  Cookie: 
+  Host: api.lvh.me:3000
+
+Response:
+  Status: 200 OK
+  Cache-Control: max-age=0, private, must-revalidate
+  Content-Length: 139
+  Content-Type: application/json; charset=utf-8
+  ETag: W/"c9cb1d6359073d8febec92c509f51621"
+  X-Request-Id: 2f672317-e0e9-4e09-abb5-ecff2e833942
+  X-Runtime: 0.003684
+
+  {
+    "id": 20,
+    "name": "Lavinia Jenkins",
+    "email": "wava@gmail.com",
+    "created_at": "2017-12-26T03:33:34.208Z",
+    "updated_at": "2017-12-26T03:33:34.208Z"
+  }
+
+
+Creating an customer
+--------------------
+
+Parameters:
+  * name - Name of customer
+  * email - Email of customer
+  * book - book leased
+
+Request:
+  POST /v1/customers
+  Accept: application/json
+  Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MTQzNDU2MTN9.ASMfiZYvaAI4KiUBravGN2sYPt61mAJ_WdOSca55dPM
+  Content-Type: application/json
+  Cookie: 
+  Host: api.lvh.me:3000
+
+  {"customer":{"name":"Book 1","email":"hannah_cain@yahoo.com"}}
+
+Response:
+  Status: 201 Created
+  Cache-Control: max-age=0, private, must-revalidate
+  Content-Length: 137
+  Content-Type: application/json; charset=utf-8
+  ETag: W/"2da018286dbfd8f88ced0a35ff444dd8"
+  Location: http://api.lvh.me:3000/v1/customers/21
+  X-Request-Id: e19f99fa-ff4d-4af0-b69c-88810beb7708
+  X-Runtime: 0.003745
+
+  {
+    "id": 21,
+    "name": "Book 1",
+    "email": "hannah_cain@yahoo.com",
+    "created_at": "2017-12-26T03:33:34.261Z",
+    "updated_at": "2017-12-26T03:33:34.261Z"
+  }
+
+Request:
+  GET /v1/customers/21
+  Accept: application/json
+  Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MTQzNDU2MTN9.ASMfiZYvaAI4KiUBravGN2sYPt61mAJ_WdOSca55dPM
+  Content-Type: application/json
+  Cookie: 
+  Host: api.lvh.me:3000
+
+Response:
+  Status: 200 OK
+  Cache-Control: max-age=0, private, must-revalidate
+  Content-Length: 137
+  Content-Type: application/json; charset=utf-8
+  ETag: W/"2da018286dbfd8f88ced0a35ff444dd8"
+  X-Request-Id: bbc9d473-9bf8-400c-893f-b2c4e774865d
+  X-Runtime: 0.001907
+
+  {
+    "id": 21,
+    "name": "Book 1",
+    "email": "hannah_cain@yahoo.com",
+    "created_at": "2017-12-26T03:33:34.261Z",
+    "updated_at": "2017-12-26T03:33:34.261Z"
+  }
+
+
+Updating an customer
+--------------------
+
+Parameters:
+  * name - Name of customer
+  * email - Email of customer
+  * book - book leased
+
+Request:
+  PUT /v1/customers/20
+  Accept: application/json
+  Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MTQzNDU2MTN9.ASMfiZYvaAI4KiUBravGN2sYPt61mAJ_WdOSca55dPM
+  Content-Type: application/json
+  Cookie: 
+  Host: api.lvh.me:3000
+
+  {"customer":{"name":"Updated Name"}}
+
+Response:
+  Status: 200 OK
+  Cache-Control: max-age=0, private, must-revalidate
+  Content-Length: 136
+  Content-Type: application/json; charset=utf-8
+  ETag: W/"4664c5e636a7300530a93885c3c4c6d7"
+  X-Request-Id: c42e9a0a-3ee9-41c6-8eb9-634df14c242b
+  X-Runtime: 0.004601
+
+  {
+    "id": 20,
+    "name": "Updated Name",
+    "email": "wava@gmail.com",
+    "created_at": "2017-12-26T03:33:34.208Z",
+    "updated_at": "2017-12-26T03:33:34.272Z"
+  }
+
+
+Deleting an customer
+--------------------
+
+Request:
+  DELETE /v1/customers/20
+  Accept: application/json
+  Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MTQzNDU2MTN9.ASMfiZYvaAI4KiUBravGN2sYPt61mAJ_WdOSca55dPM
+  Content-Type: application/json
+  Cookie: 
+  Host: api.lvh.me:3000
+
+Response:
+  Status: 204 No Content
+  Cache-Control: no-cache
+  X-Request-Id: 93a5da6d-6c46-44f0-bc60-c747d462d4f9
+  X-Runtime: 0.002905
+
+

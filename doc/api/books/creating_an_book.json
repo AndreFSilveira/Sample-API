@@ -1,0 +1,126 @@
+{
+  "resource": "Books",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "/v1/books",
+  "description": "Creating an book",
+  "explanation": "First, create an book, then make a later request to get it back",
+  "parameters": [
+    {
+      "scope": "book",
+      "name": "name",
+      "description": "Name of book"
+    },
+    {
+      "scope": "book",
+      "name": "pages",
+      "description": "Pages of book"
+    },
+    {
+      "scope": "book",
+      "name": "leased",
+      "description": "If book is leased"
+    },
+    {
+      "scope": "book",
+      "name": "year",
+      "description": "year of book launch"
+    },
+    {
+      "scope": "book",
+      "name": "customer_id",
+      "description": "Customer who rented the book"
+    }
+  ],
+  "response_fields": [
+    {
+      "scope": "book",
+      "Type": "String",
+      "name": "name",
+      "description": "Name of book"
+    },
+    {
+      "scope": "book",
+      "Type": "Integer",
+      "name": "pages",
+      "description": "Pages of book"
+    },
+    {
+      "scope": "book",
+      "Type": "Boolean",
+      "name": "leased",
+      "description": "If book is leased"
+    },
+    {
+      "scope": "book",
+      "Type": "Integer",
+      "name": "year",
+      "description": "year of book launch"
+    },
+    {
+      "scope": "book",
+      "Type": "Customer",
+      "name": "customer_id",
+      "description": "Customer who rented the book"
+    }
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/v1/books",
+      "request_body": "{\"book\":{\"name\":\"Book 1\",\"pages\":200,\"leased\":false,\"year\":2000,\"customer_id\":null}}",
+      "request_headers": {
+        "Host": "api.lvh.me:3000",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MTQzNDU2MTN9.ASMfiZYvaAI4KiUBravGN2sYPt61mAJ_WdOSca55dPM",
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 201,
+      "response_status_text": "Created",
+      "response_body": "{\n  \"id\": 21,\n  \"name\": \"Book 1\",\n  \"pages\": 200,\n  \"leased\": false,\n  \"year\": 2000,\n  \"customer_id\": null,\n  \"created_at\": \"2017-12-26T03:33:34.123Z\",\n  \"updated_at\": \"2017-12-26T03:33:34.123Z\"\n}",
+      "response_headers": {
+        "Location": "http://api.lvh.me:3000/v1/books/21",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"c41dc0d27da16490235369e0cd5bd383\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "2682c07e-a06d-490c-987d-4b2ed56e6487",
+        "X-Runtime": "0.004625",
+        "Content-Length": "163"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://api.lvh.me:3000/v1/books\" -d '{\"book\":{\"name\":\"Book 1\",\"pages\":200,\"leased\":false,\"year\":2000,\"customer_id\":null}}' -X POST \\\n\t-H \"Host: api.lvh.me:3000\" \\\n\t-H \"Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MTQzNDU2MTN9.ASMfiZYvaAI4KiUBravGN2sYPt61mAJ_WdOSca55dPM\" \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Accept: application/json\" \\\n\t-H \"Cookie: \""
+    },
+    {
+      "request_method": "GET",
+      "request_path": "/v1/books/21",
+      "request_body": null,
+      "request_headers": {
+        "Host": "api.lvh.me:3000",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MTQzNDU2MTN9.ASMfiZYvaAI4KiUBravGN2sYPt61mAJ_WdOSca55dPM",
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"id\": 21,\n  \"name\": \"Book 1\",\n  \"pages\": 200,\n  \"leased\": false,\n  \"year\": 2000,\n  \"customer_id\": null,\n  \"created_at\": \"2017-12-26T03:33:34.123Z\",\n  \"updated_at\": \"2017-12-26T03:33:34.123Z\"\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"c41dc0d27da16490235369e0cd5bd383\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "ab909bcf-89a4-44b8-b1ca-4aa1267bf7da",
+        "X-Runtime": "0.002030",
+        "Content-Length": "163"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl -g \"http://api.lvh.me:3000/v1/books/21\" -X GET \\\n\t-H \"Host: api.lvh.me:3000\" \\\n\t-H \"Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MTQzNDU2MTN9.ASMfiZYvaAI4KiUBravGN2sYPt61mAJ_WdOSca55dPM\" \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Accept: application/json\" \\\n\t-H \"Cookie: \""
+    }
+  ]
+}

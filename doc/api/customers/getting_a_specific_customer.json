@@ -1,0 +1,44 @@
+{
+  "resource": "Customers",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/v1/customers/:id",
+  "description": "Getting a specific customer",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/v1/customers/20",
+      "request_body": null,
+      "request_headers": {
+        "Host": "api.lvh.me:3000",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MTQzNDU2MTN9.ASMfiZYvaAI4KiUBravGN2sYPt61mAJ_WdOSca55dPM",
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"id\": 20,\n  \"name\": \"Lavinia Jenkins\",\n  \"email\": \"wava@gmail.com\",\n  \"created_at\": \"2017-12-26T03:33:34.208Z\",\n  \"updated_at\": \"2017-12-26T03:33:34.208Z\"\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"c9cb1d6359073d8febec92c509f51621\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "2f672317-e0e9-4e09-abb5-ecff2e833942",
+        "X-Runtime": "0.003684",
+        "Content-Length": "139"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl -g \"http://api.lvh.me:3000/v1/customers/20\" -X GET \\\n\t-H \"Host: api.lvh.me:3000\" \\\n\t-H \"Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MTQzNDU2MTN9.ASMfiZYvaAI4KiUBravGN2sYPt61mAJ_WdOSca55dPM\" \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Accept: application/json\" \\\n\t-H \"Cookie: \""
+    }
+  ]
+}

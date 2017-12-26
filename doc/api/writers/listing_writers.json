@@ -1,0 +1,47 @@
+{
+  "resource": "Writers",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/v1/writers",
+  "description": "Listing writers",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/v1/writers",
+      "request_body": null,
+      "request_headers": {
+        "Host": "api.lvh.me:3000",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MTQzNDU2MTN9.ASMfiZYvaAI4KiUBravGN2sYPt61mAJ_WdOSca55dPM",
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "[\n  {\n    \"id\": 1,\n    \"name\": \"Emma Haag\",\n    \"city\": \"East Javonside\",\n    \"dob\": \"1989-01-11\",\n    \"created_at\": \"2017-12-26T03:33:34.284Z\",\n    \"updated_at\": \"2017-12-26T03:33:34.284Z\"\n  },\n  {\n    \"id\": 2,\n    \"name\": \"Emma Haag\",\n    \"city\": \"East Javonside\",\n    \"dob\": \"1989-01-11\",\n    \"created_at\": \"2017-12-26T03:33:34.288Z\",\n    \"updated_at\": \"2017-12-26T03:33:34.288Z\"\n  },\n  {\n    \"id\": 3,\n    \"name\": \"Emma Haag\",\n    \"city\": \"East Javonside\",\n    \"dob\": \"1989-01-11\",\n    \"created_at\": \"2017-12-26T03:33:34.292Z\",\n    \"updated_at\": \"2017-12-26T03:33:34.292Z\"\n  },\n  {\n    \"id\": 4,\n    \"name\": \"Emma Haag\",\n    \"city\": \"East Javonside\",\n    \"dob\": \"1989-01-11\",\n    \"created_at\": \"2017-12-26T03:33:34.294Z\",\n    \"updated_at\": \"2017-12-26T03:33:34.294Z\"\n  },\n  {\n    \"id\": 5,\n    \"name\": \"Emma Haag\",\n    \"city\": \"East Javonside\",\n    \"dob\": \"1989-01-11\",\n    \"created_at\": \"2017-12-26T03:33:34.297Z\",\n    \"updated_at\": \"2017-12-26T03:33:34.297Z\"\n  },\n  {\n    \"id\": 6,\n    \"name\": \"Emma Haag\",\n    \"city\": \"East Javonside\",\n    \"dob\": \"1989-01-11\",\n    \"created_at\": \"2017-12-26T03:33:34.301Z\",\n    \"updated_at\": \"2017-12-26T03:33:34.301Z\"\n  },\n  {\n    \"id\": 7,\n    \"name\": \"Emma Haag\",\n    \"city\": \"East Javonside\",\n    \"dob\": \"1989-01-11\",\n    \"created_at\": \"2017-12-26T03:33:34.304Z\",\n    \"updated_at\": \"2017-12-26T03:33:34.304Z\"\n  },\n  {\n    \"id\": 8,\n    \"name\": \"Emma Haag\",\n    \"city\": \"East Javonside\",\n    \"dob\": \"1989-01-11\",\n    \"created_at\": \"2017-12-26T03:33:34.307Z\",\n    \"updated_at\": \"2017-12-26T03:33:34.307Z\"\n  },\n  {\n    \"id\": 9,\n    \"name\": \"Emma Haag\",\n    \"city\": \"East Javonside\",\n    \"dob\": \"1989-01-11\",\n    \"created_at\": \"2017-12-26T03:33:34.310Z\",\n    \"updated_at\": \"2017-12-26T03:33:34.310Z\"\n  },\n  {\n    \"id\": 10,\n    \"name\": \"Emma Haag\",\n    \"city\": \"East Javonside\",\n    \"dob\": \"1989-01-11\",\n    \"created_at\": \"2017-12-26T03:33:34.312Z\",\n    \"updated_at\": \"2017-12-26T03:33:34.312Z\"\n  }\n]",
+      "response_headers": {
+        "Link": "<http://api.lvh.me:3000/v1/writers?page=2>; rel=\"last\", <http://api.lvh.me:3000/v1/writers?page=2>; rel=\"next\"",
+        "Per-Page": "10",
+        "Total": "20",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"c96bae918806add58a248598f3c869ff\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "5890033e-45e1-4b7e-9344-641f3c04aed2",
+        "X-Runtime": "0.038622",
+        "Content-Length": "1512"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl -g \"http://api.lvh.me:3000/v1/writers\" -X GET \\\n\t-H \"Host: api.lvh.me:3000\" \\\n\t-H \"Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MTQzNDU2MTN9.ASMfiZYvaAI4KiUBravGN2sYPt61mAJ_WdOSca55dPM\" \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Accept: application/json\" \\\n\t-H \"Cookie: \""
+    }
+  ]
+}

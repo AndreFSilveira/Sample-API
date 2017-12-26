@@ -1,0 +1,63 @@
+{
+  "resource": "Writers",
+  "resource_explanation": null,
+  "http_method": "PUT",
+  "route": "/v1/writers/:id",
+  "description": "Updating an writer",
+  "explanation": null,
+  "parameters": [
+    {
+      "scope": "writer",
+      "name": "name",
+      "description": "Name of Writer"
+    },
+    {
+      "scope": "writer",
+      "name": "city",
+      "description": "Writing hometown"
+    },
+    {
+      "scope": "writer",
+      "name": "dob",
+      "description": "writer's birth date"
+    },
+    {
+      "scope": "writer",
+      "name": "books",
+      "description": "books the author wrote"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "PUT",
+      "request_path": "/v1/writers/20",
+      "request_body": "{\"writer\":{\"name\":\"Updated Name\"}}",
+      "request_headers": {
+        "Host": "api.lvh.me:3000",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MTQzNDU2MTN9.ASMfiZYvaAI4KiUBravGN2sYPt61mAJ_WdOSca55dPM",
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"id\": 20,\n  \"name\": \"Updated Name\",\n  \"city\": \"East Javonside\",\n  \"dob\": \"1989-01-11\",\n  \"created_at\": \"2017-12-26T03:33:34.382Z\",\n  \"updated_at\": \"2017-12-26T03:33:34.453Z\"\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"35a13a5b1240b837f7c2ab64df210003\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "0edf97f3-b7cf-42a9-a1c1-018409189a72",
+        "X-Runtime": "0.004892",
+        "Content-Length": "154"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://api.lvh.me:3000/v1/writers/20\" -d '{\"writer\":{\"name\":\"Updated Name\"}}' -X PUT \\\n\t-H \"Host: api.lvh.me:3000\" \\\n\t-H \"Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MTQzNDU2MTN9.ASMfiZYvaAI4KiUBravGN2sYPt61mAJ_WdOSca55dPM\" \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Accept: application/json\" \\\n\t-H \"Cookie: \""
+    }
+  ]
+}
